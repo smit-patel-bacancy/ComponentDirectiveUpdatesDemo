@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appStandaloneDireciveDemo1]',
@@ -6,6 +6,13 @@ import { Directive } from '@angular/core';
 })
 export class StandaloneDireciveDemo1Directive {
 
-  constructor() { }
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
 
+  @HostListener('mouseover') onMouseOver() {
+    this.renderer.setStyle(this.el.nativeElement, 'background-color', 'orange');
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.renderer.setStyle(this.el.nativeElement, 'background-color', '');
+  }
 }

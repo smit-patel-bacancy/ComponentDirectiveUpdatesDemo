@@ -3,5 +3,31 @@
     <div class="col-md-12">
       <h1> Welcome To Angular Components & Directives Updates Demo </h1>
     </div>
+    <div class="col-md-3">
+      <button class="btn btn-info" [routerLink]="['/classicComponent1']"
+        routerLinkActive="router-link-active">classicComponent1</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-info" [routerLink]="['/classicComponent2']"
+        routerLinkActive="router-link-active">classicComponent2</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-info" [routerLink]="['/standaloneComponent1']"
+        routerLinkActive="router-link-active">standaloneComponent1</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-info" [routerLink]="['/standaloneComponent2']"
+        routerLinkActive="router-link-active">standaloneComponent2</button>
+    </div>
+    <br>
+    <br>
+    <hr>
   </div>
+
+  <div class="row mt-3">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
 </div>

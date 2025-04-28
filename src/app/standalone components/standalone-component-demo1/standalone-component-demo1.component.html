@@ -1,1 +1,9 @@
 <p>standalone-component-demo1 works!</p>
+
+<input type="text" [(ngModel)]="name" placeholder="Enter your name" />
+<p appStandaloneDireciveDemo1>Hello, {{ name }}!</p>
+<p appStandaloneDireciveDemo2>Hello, {{ name }}!</p>
+
+<app-standalone-component-demo2></app-standalone-component-demo2>
+
+<!-- <app-classic-component-demo1></app-classic-component-demo1> -->

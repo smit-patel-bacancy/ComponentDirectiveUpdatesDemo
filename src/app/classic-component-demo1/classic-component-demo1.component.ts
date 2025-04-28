@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./classic-component-demo1.component.scss']
 })
 export class ClassicComponentDemo1Component {
-
+  name: string = 'Classic Component Demo 1';
 }
